@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style>
+h2{background-color:black;
+	text-align:center;
+	color:white;
+	}
+fieldset{
+	text-align:left;
+	border:none;
+	width:700px;
+	}
+h4{background-color:rgb(197, 197, 197);
+	width:50%;}
+#submit{background-color:limegreen;
+        color:white;
+        border:2px white;
+        padding:8px 8px;
+        border-style:inset;}
+#reset{background-color:red;
+        color:white;
+        border:2px white;
+        padding:8px 8px;
+        border-style:inset;}
+</style>
+<script>
+function check()
+{
+	let p=document.form.uform.pwd.value;
+	let cp=document.form.uform.cpwd.value;
+	if(p!=cp){
+		document.getElementById("pass").innerHTML.style.color="red";
+		document.getElementById("pass").innerHTML="password and confirm password is not matching";
+	}
+	}
+</script>
+</head>
+<body>
+<center>
+<fieldset>
+<h2><b>User Registration</b></h2>
+<form name="uform" action="User_db" method="get" enctype="multipart/form-data">
+<h4><b>Personal details</b></h4>
+<br>Name&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;<input type="text" name="name" required>
+<br><br>Photo&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;<input type="file" name="img" >
+<br><br>Gender&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;:&emsp;<input type="radio" name="sex" value="Male" >Male&nbsp;<input type="radio" name="sex" value="Female" >Female
+<br><br>Age&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;:&emsp;<input type="number" name="age" required>
+<br><br>DOB&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;:&emsp;<input type="date" name="DOB" placeholder="YYYY-MM-DD" required>
+<br><br>Country&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;<input type="text" name="country" required>
+<br><br>State&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;:&emsp;<input type="text" name="state" required>
+<br><br>District&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;:&emsp;<input type="text" name="district" required>
+<br><br>City&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;:&emsp;<input type="text" name="city" >
+<br><br>Address&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;<input type="text" name="add" required>
+<br><br>Pincode&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;<input type="number" name="pin" >
+<br><br>Email_id&emsp;&emsp;&emsp;&emsp;&ensp;:&emsp;<input type="email" name="email" required>
+<br><br>Phone No&emsp;&emsp;&emsp;&emsp;&nbsp;:&emsp;<input type="number" name="phone" >
+<br><br><h4><b>Login details</b></h4>
+<br>Username&emsp;&emsp;&emsp;&emsp;&nbsp;:&emsp;<input type="text" name="uname" required>
+<br><br>Password&emsp;&emsp;&emsp;&emsp;&ensp;:&emsp;<input type="password" name="pwd" required>
+<br><br>Comfirm Password&ensp;:&emsp;<input type="password" name="cpwd" id="pass" onkeypress="check()" required>
+<br><br><br><center><input id="submit" type="submit" value="Submit">&emsp;<input id="reset" type="reset" value="Reset"></center>
+</form></fieldset></center>
+</body>
+</html>

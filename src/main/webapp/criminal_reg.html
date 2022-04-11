@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style>
+h2{background-color:black;
+	text-align:center;
+	color:white;
+	}
+fieldset{
+	border:none;
+	width:700px;
+	}
+h4{background-color:rgb(197, 197, 197);
+	width:50%;}
+#submit{background-color:limegreen;
+        color:white;
+        border:2px white;
+        padding:8px 8px;
+        border-style:inset;}
+#reset{background-color:red;
+        color:white;
+        border:2px white;
+        padding:8px 8px;
+        border-style:inset;}
+</style>
+</head>
+<body>
+<center>
+<fieldset>
+<h2><b>Criminal Register</b></h2>
+<form name="cform" action="Crime_db" method="get" enctype="multipart/form-data">
+<h4><b>Personal details</b></h4>
+<br>Name:<input type="text" name="name" required>
+<br><br>ID:<input type="number" name="id" required>
+<br><br>Photo:<input type="file" name="img" >
+<br><br>Gender:<input type="radio" name="sex" value="Male" >Male&nbsp;<input type="radio" name="sex" value="Female" >Female
+<br><br>Age:<input type="number" name="age" required>
+<br><br>DOB:<input type="date" name="DOB" placeholder="YYYY-MM-DD" required>
+<br><br>Country:<input type="text" name="country" required>
+<br><br>State:<input type="text" name="state" required>
+<br><br>City:<input type="text" name="city" >
+<br><br>Address:<input type="text" name="add" required>
+<br><br>Pincode:<input type="number" name="pin" >
+<br><br>Hieght(in ft):<input type="number" name="height">
+<br><br>Weight(in kgs):<input type="number" name="weight" >
+<br><br><h4><b>Case details</b></h4>
+<br>Crime category:<input type="text" name="ctype" required>
+<br><br>Crime Date:<input type="date" name="cdate" required>
+<br><br>Arrest Date:<input type="date" name="adate" required>
+<br><br>Case Description:<br><textarea rows="10" cols="40" name="desc" required></textarea>
+<br><br><center><input id="submit" type="submit" value="Submit">&emsp;<input id="reset" type="reset" value="Clear"></center><br>
+</form></fieldset></center>
+</body>
+</html>

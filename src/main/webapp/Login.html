@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<style>
+fieldset{
+	border:none;
+	width:350px;
+	}
+legend{text-align:center;}
+#btn{background-color:limegreen;
+        color:white;
+        border:2px white;
+        padding:8px 8px;
+        border-style:outset;
+        border-radius:5px;}
+</style>
+<script>
+function myfun()
+{
+   var x=document.getElementById("pass");
+   if(x.type==="password"){
+	   x.type="text";
+   }
+   else{
+	   x.type="password"
+   }
+}
+</script>
+</head>
+<body>
+	<center>
+	<fieldset>
+	<legend>Login</legend><br>
+		<form action="Check" method="get">
+			Username:<input type="text" name="username"><br/><br/>
+			Password:<input type="password" name="pwd" id="pass"><br/><br/>
+			<input type="checkbox" onclick="myfun()">Show Password<br/><br/>
+			<input id="btn" type="submit" value="Login"><br/><br/>
+		</form>
+	</fieldset></center>
+</body>
+</html>

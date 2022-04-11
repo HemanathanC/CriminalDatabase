@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+table{margin-left:auto;
+	  margin-right:auto;
+	  border:2px solid black;
+	  width:70%;
+	  height:30%;}
+tr{border:2px solid black;
+	height:50px;
+	width:70px;
+	}
+td,th{text-align:center;
+	border:1px solid black;}
+img{height:100px;
+	width:80px}
+#a{background-color:red;
+        color:white;
+        border:2px white;
+        padding:8px 8px;
+        border-style:rigid;
+        border-radius:5px;
+        text-decoration:none;}
